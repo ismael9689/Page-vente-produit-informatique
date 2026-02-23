@@ -1,0 +1,604 @@
+/* ---------------TEXTE PAGE ACCUEIL---------------  */
+
+#Accueil {
+    background-color: #f4f4f; /* Fond gris clair */
+    padding: 40px 20px; /* Espacement autour du contenu */
+}
+
+#Accueil .container {
+    max-width: 1200px; /* Limite la largeur du contenu */
+    margin: 0 auto; /* Centrer le contenu */
+    padding: 20px;
+    background-color: #fff; /* Fond blanc pour le conteneur */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+h1 {
+    font-size: 2.5rem; /* Taille de police pour le titre principal */
+    color: #555; /* Couleur sombre */
+    text-align: center;
+    margin-bottom: 20px; /* Espacement sous le titre */
+}
+
+h2 {
+    font-size: 1.8rem; /* Taille de police pour les sous-titres */
+    color: #28a745; /* Vert pour les sous-titres */
+    margin-top: 30px; /* Espacement au-dessus des sous-titres */
+}
+
+p {
+    font-size: 1rem; /* Taille de police du texte */
+    line-height: 1.6; /* Espacement entre les lignes */
+    color: #555; /* Couleur de texte gris clair */
+    margin-bottom: 20px; /* Espacement sous les paragraphes */
+}
+
+ul {
+    list-style-type: disc; /* Liste avec des puces */
+    margin-left: 20px; /* Décalage à gauche pour les éléments de liste */
+}
+
+ul li {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 10px; /* Espacement entre les éléments de liste */
+}
+
+/* ---------------TEXTE PAGE A PROPOS---------------  */
+
+#Apropos {
+    background-color: #f4f4f4; /* Fond gris clair */
+    padding: 40px 20px; /* Espacement autour du contenu */
+}
+
+#Apropos .container {
+    max-width: 1200px; /* Limite la largeur du contenu */
+    margin: 0 auto; /* Centrer le contenu */
+    padding: 20px;
+    background-color: #fff; /* Fond blanc pour le conteneur */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+h2 {
+    font-size: 2.5rem; /* Taille de police pour le titre principal */
+    color: #555; /* Couleur sombre */
+    text-align: center;
+    margin-bottom: 20px; /* Espacement sous le titre */
+}
+
+h3 {
+    font-size: 1.8rem; /* Taille de police pour les sous-titres */
+    color: #28a745; /* Vert pour les sous-titres */
+    margin-top: 30px; /* Espacement au-dessus des sous-titres */
+}
+
+p {
+    font-size: 1rem; /* Taille de police du texte */
+    line-height: 1.6; /* Espacement entre les lignes */
+    color: #555; /* Couleur de texte gris clair */
+    margin-bottom: 20px; /* Espacement sous les paragraphes */
+}
+
+ul {
+    list-style-type: disc; /* Liste avec des puces */
+    margin-left: 20px; /* Décalage à gauche pour les éléments de liste */
+}
+
+ul li {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 10px; /* Espacement entre les éléments de liste */
+}
+
+strong {
+    font-weight: bold; /* Met en gras les éléments importants */
+}
+
+/* ---------------COMPTEUR VISITES---------------  */
+<style>
+    #compteur {
+        font-size: 1.5rem; /* Taille de police plus grande */
+        color: #28a745; /* Couleur verte */
+        font-weight: bold; /* Texte en gras */
+        text-align: center; /* Centrer le texte */
+        padding: 10px; /* Espacement interne */
+        border: 2px solid #28a745; /* Bordure verte */
+        border-radius: 10px; /* Coins arrondis */
+        background-color: #f4f4f4; /* Couleur de fond */
+        width: fit-content; /* Ajuster à la taille du texte */
+        margin: 20px auto; /* Centrer dans la page */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre élégante */
+    }
+</style>
+
+/* ---------------AVIS CLIENT---------------  */
+      
+  .reviews {
+    width: 80%;
+    margin: 20px auto;
+    }
+      
+  .review-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    }
+      
+  .review-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+      
+  .review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    }
+      
+  .review-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    }
+      
+  .review-text {
+    font-size: 12px;
+    color: #555;
+    }
+      
+  .rating {
+    margin-top: 10px;
+    }
+      
+  .add-review-form {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+      
+  .add-review-form h3 {
+    text-align: center;
+    }
+      
+  .add-review-form input,
+  .add-review-form textarea,
+  .add-review-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    }
+      
+  .add-review-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+      
+  .add-review-form button:hover {
+    background-color: #555;
+    }
+      
+      
+/* ---------------Mode sombre et clair--------------- */
+form {
+  padding: 5px;
+  border-color: #313131;
+  border-style: solid;
+  border-width: 1px 0;
+}
+
+.btToggle .btn {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  line-height: 34px;
+  color: #fff;
+}
+
+/* ---------------Cacher la checkbox par défaut--------------- */
+.btToggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* ---------------Slider pour le toggle--------------- */
+.btToggle .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+.btToggle .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.btToggle input:checked + .slider {
+  background-color: #fff;
+}
+
+.btToggle input:checked + .slider:before {
+  transform: translateX(26px);
+  background-color: #000;
+}
+
+/* ---------------Mode sombre--------------- */
+.mode-dark {
+  background-color: #000;
+  color: #fff;
+}
+
+.mode-dark form {
+  background-color: #232323;
+  border-color: #ccc;
+}
+
+.mode-dark .bloc-lien a {
+  color: #fff;
+}
+
+/* ---------------Mode blanc--------------- */
+.mode-white {
+  background-color: #fff; /* Arrière-plan blanc */
+  color: #000; /* Texte noir */
+}
+
+.mode-white form {
+  background-color: #f9f9f9; /* Couleur plus claire pour le formulaire */
+  border-color: #ccc; /* Bordure grise */
+}
+
+.mode-white .bloc-lien a {
+  color: #000; /* Liens noirs en mode blanc */
+}
+
+ 
+/*--------------- GESTION DU PANIER PAR PRODUIT---------------*/
+      
+.products {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+  }
+      
+.product {
+  background-color: #28a745; /* Fond vert */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0, 255,0 ); /* contour vert */
+  text-align: center;
+  width: 200px;
+  display: flex;            /* Activation du flexbox */
+  flex-direction: column;   /* Agencement vertical des enfants */
+  justify-content: center;  /* Centrer le contenu verticalement */
+  align-items: center;      /* Centrer horizontalement */
+  }
+      
+.product p {
+  font-size: 18px;
+  font-weight: bold;
+  }
+      
+.product .price {
+  font-size: 18px;
+  margin-bottom: 10px; /* Ajouter un espace entre le prix et le bouton */
+  color: #ffffff;
+  }
+      
+.add-to-cart {
+  background-color:#fafaf7;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  }
+      
+.add-to-cart:hover {
+  background-color: #CECECE;
+  }
+
+/*--------------- GESTION DU PANIER FINAL---------------*/
+    
+.cart {
+  color: #fff;
+  background-image: url(https://img.freepik.com/photos-gratuite/surface-abstraite-textures-mur-pierre-beton-blanc_74190-8189.jpg);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  text-align: center;
+  color: black;
+  }
+      
+#cart-items {
+  list-style-type: none;
+  padding: 0;
+  color: whitesmoke;
+  }
+      
+#cart-items li {
+  margin: 10px 0;
+  font-size: 12px;
+  }
+      
+#checkout {
+  background-color: #28a745;
+  color: white;
+  border: none;
+          padding: 10px;
+          border-radius: 5px;
+          cursor: not-allowed;
+      }
+      
+#checkout:enabled {
+    cursor: pointer;
+    background-color: #28a745;
+  }
+
+#checkout:hover {
+  background-color: #01D758; /* Noir au survol */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
+  transform: scale(1.05); /* Léger agrandissement au survol */
+  }  
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+    
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    }
+
+input[type="text"] {
+    padding: 8px;
+    font-size: 12px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    }
+
+li {
+    padding: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    background-color: #000000;
+    }
+      
+/*---------------vider le panier---------------*/
+
+#clear-cart {
+  background-color: #000000; /* Rouge vif */
+  color: white; /* Texte en blanc */
+  border: none; /* Pas de bordure */
+  padding: 10px 20px; /* Espacement interne */
+  border-radius: 5px; /* Bords arrondis */
+  font-size: 12px; /* Taille du texte */
+  cursor: pointer; /* Pointeur "main" au survol */
+  transition: all 0.25s ease; /* Transition fluide */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre élégante */
+  }
+
+#clear-cart:hover {
+  background-color: #FF0000; /* Rouge plus foncé au survol */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
+  transform: scale(1.05); /* Léger agrandissement au survol */
+  }
+            
+#clear-cart:active {
+  transform: scale(0.95); /* Effet de clic */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Réduction de l'ombre au clic */
+  }
+            
+
+/*---------------Barre de recherche produit---------------*/
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  }
+
+li {
+  margin: 5px 0;
+  }
+
+a {
+  text-decoration: none;
+  color: #007BFF;
+  }
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer; /* Pointeur "main" au survol */
+  }
+
+/*-----------------CSS INITIAL*-----------------*/
+
+body {
+  font-family: Arial, sans-serif; /* Police de caratère du corps */
+  margin: 0; /* Pas de marge dans le body */
+  padding: 0;  /*Définit l'espace qui sépare le contenu du body de sa bordure de chaque côté*/
+  }
+      
+header, footer {
+    font-variant-caps: small-caps; /* Police de caractère du header et footer */
+    border-radius: 60px; /* Arrondi du header et footer */
+    background-image: url(https://i.gifer.com/BtVJ.gif); /* Header et footer en fond */
+    color: #ffffff !important; /* Texte blanc avec priorité */
+    padding: 20px; /* Largeur du header et footer à 20 pixels */
+    text-align: center; /* Texte centré */
+}
+
+header p, footer p, header h1, footer h1 { /* Ajouter h1 ici aussi */
+    color: #ffffff !important; /* Texte blanc pour les paragraphes et titres */
+}
+
+
+/* ---------------Style et couleur des boutons de la zone menu horizontal---------------*/
+
+a[href] {
+    cursor: pointer; /* Pointeur "main" au survol */
+    transition: all 0.25s ease; /* Transition fluide */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre élégante */
+    display: inline-block; /* Nécessaire pour les effets */
+    padding: 5px 10px; /* Espacement intérieur */
+    border-radius: 5px; /* Coins arrondis */
+    text-decoration: none; /* Supprimer le soulignement */
+    color: #ffffff; /* Couleur par défaut : gris foncé */
+}
+
+a[href]:hover {
+    background-color: #00FF00; /* vert clair au survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
+    transform: scale(1.05); /* Léger agrandissement */
+    color: #fff; /* Texte blanc */
+}
+
+a[href]:active {
+    transform: scale(0.95); /* Effet de clic */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Réduction de l'ombre */
+}     
+
+/* ---------------Style horizontal de la zone menu--------------- */
+nav ul {
+  list-style-type: none;
+  padding: 0; /*Définit l'espace qui sépare le contenu du body de sa bordure de chaque côté*/
+  }
+      
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+  }
+    
+nav ul li a {
+  color: #ff0000;
+  text-decoration: none;
+  }
+      
+main {
+  padding: 20px;
+  padding-bottom: 60px; /* Ajout de marge pour le footer */
+  }
+
+/* ---------------Texte defilant horizontal---------------*/
+#produits marquee {
+    height: 100%; /* Occupe toute la hauteur disponible */
+    line-height: 150px; /* Centrer verticalement le texte */
+}
+
+#produits h2 {
+    display: inline;
+    vertical-align: middle;
+    margin-right: 400px; /* Ajustez l'espace comme vous le souhaitez */
+}
+
+/* ---------------Propriété du formulaire de contact---------------*/
+
+form { 
+  max-width: 500px;
+  margin: auto;
+  padding: 20px; /* Vérifiez si un padding est appliqué */
+
+  }
+      
+label { /* Propriété du label du formulaire*/
+  display: block;
+  margin-bottom: 5px;
+  }
+              
+input[type="text"], /* Champ Nom du formulaire de contact*/
+input[type="email"], /* Champ Email du formulaire de contact*/
+textarea /* Définit la zone  de texte du formulaire de contact*/
+  {
+  width: 100% !important;
+  padding: 10px !important;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em; /* Uniformité de la taille de la police */
+  box-sizing: border-box;
+  }
+      
+input[type="submit"] {
+  background-color: #000;
+  color: #fff; /* Couleur blanche bouton */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px; /* Bords arrondis */
+  cursor: pointer; /* Changement du pointer au survol du bouton avec la souris */
+  }
+      
+input[type="submit"]:hover {
+  background-color: #16B84E; /* Changement de couleur au survol du bouton avec la souris */
+  }
+
+ 
+             
+/* ---------------- Toutes les classes définies ci-dessous-----------------*/
+      
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  }
+      
+.produits {
+  margin-bottom: 50px;
+  }
+      
+.produit {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  }
+      
+.produit img {
+  width: 30%; /*taille image produits*/
+  border-radius: 5px;
+  }
+

@@ -1,0 +1,195 @@
+<!DOCTYPE html> 
+<html lang="fr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vente de Matériel Informatique</title>
+    <link rel="stylesheet" href="Style_CSS_triplOS.css" type="text/css">
+    <style>
+
+    /* Conteneur principal pour aligner les images côte à côte */
+    .blur-container {
+        display: flex;
+        justify-content: center; /* Centre les images horizontalement */
+        gap: 20px; /* Espace entre les images */
+    }
+
+    /* Images avec flou par défaut */
+    .blur-container img {
+        -webkit-filter: blur(5px); /* Ajoute un flou */
+        filter: blur(5px);
+        -webkit-transition: 0.3s ease-in-out; /* Transition fluide pour l'effet */
+        transition: 0.3s ease-in-out;
+        width: 300px; /* Largeur uniforme pour toutes les images */
+        height: auto; /* Conserve les proportions */
+        border-radius: 8px; /* Ajoute des coins arrondis (optionnel) */
+    }
+
+    /* Supprime le flou lorsque l'image est survolée */
+    .blur-container img:hover {
+        -webkit-filter: blur(0);
+        filter: blur(0);
+    }
+
+    </style>
+
+<!-------------------------  Script compteur visites  ----------------------- -->
+
+    <style>
+        #compteur {
+            font-size: 1.5rem;
+            color: #28a745;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            border: 2px solid #28a745;
+            border-radius: 10px;
+            background-color: #f4f4f4;
+            width: fit-content;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+	<script>
+        // Simuler un compteur de visites avec localStorage
+        function gererCompteur() {
+            // Charger ou initialiser le compteur
+            let compteur = localStorage.getItem("compteur_visites");
+            if (compteur === null) {
+                compteur = 0;
+            } else {
+                compteur = parseInt(compteur, 10);
+            }
+
+            // Incrémenter le compteur
+            compteur++;
+
+            // Enregistrer la nouvelle valeur
+            localStorage.setItem("compteur_visites", compteur);
+
+            // Afficher la valeur
+            document.getElementById("compteur").textContent = "Nombre de visites : " + compteur;
+        }
+
+        // Exécuter au chargement de la page
+        window.onload = gererCompteur;
+    </script>
+</head>
+
+<body>
+<script src=style_java_triplOS.js></script>
+
+    <header>
+        <div class="container">
+            <h1>Vente de Matériel Informatique</h1>
+            <nav>
+                <ul>
+                    <span class="blink-one">
+                        <li><a href="Page_accueil.html">Accueil</a></li>
+                        <li><a href="Page_Vente.html">Produits</a></li>
+                        <li><a href="#contact">Contact</a></li>               
+                        <li><a href="Page_apropos.html">A propos</a></li>
+                        <li><a href="page_inscription.html">Inscription</a></li>
+                    </a>
+                </span>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+<main>
+      
+<!------------------------- Mode sombre ------------------------->
+
+    <form name="mytheme">
+      <label class="btToggle">
+        <center>
+            <span class="btn">
+            <input type="checkbox" name="theme-mode">
+            <span class="slider"></span>
+            </span> 
+            <span class="label"> mode blanc</span>
+        </center>
+      </label>
+    </form>
+
+<!------------------------- Texte de présentation de ACCUEIL  ------------------------->
+
+<section id="Accueil">
+    <div class="container">
+        <h1>Bienvenue dans le temple de la tech et du fun ! 🎉</h1>
+        <p> 
+            Ici, on ne vend pas que des produits informatiques, on booste votre quotidien numérique. Besoin d’un PC qui carbure, d’accessoires stylés ? Vous êtes au bon endroit. Préparez-vous à upgrader votre vie digitale avec des prix qui ne plantent jamais ! 😉
+        </p>
+
+        <p>
+            Chez <strong>nous</strong>, nous sommes passionnés par la technologie et l'innovation. Notre objectif est de rendre la technologie accessible à tous, en vous offrant des produits et des services de qualité supérieure. Que vous soyez un particulier à la recherche d'un équipement informatique performant ou une entreprise à la recherche de solutions numériques sur-mesure, nous avons les ressources et les compétences pour répondre à vos besoins.
+        </p>
+
+        <h2>Ce que nous faisons</h2>
+        <p>
+            Nous proposons une large gamme de produits informatiques, allant des ordinateurs aux accessoires spécialisés, conçus pour améliorer votre quotidien numérique. En plus de notre offre de produits, nous fournissons des services de conseils personnalisés pour vous aider à faire les meilleurs choix technologiques en fonction de vos besoins.
+        </p>
+        <p>
+            Nous mettons un point d'honneur à travailler avec les dernières innovations afin de vous offrir des solutions à la pointe de la technologie. Notre équipe d'experts est à votre disposition pour vous accompagner à chaque étape, de l'achat à l'installation, en passant par l'optimisation de votre équipement.
+        </p>
+
+        <h2>Nos projets</h2>
+        <p> 
+            Au fil des années, nous avons eu la chance de travailler sur de nombreux projets passionnants. Voici quelques exemples :
+        </p>
+        <ul>
+            <li><strong>Développement d'une solution cloud pour PME :</strong> Nous avons créé une plateforme cloud sécurisée pour une PME afin de faciliter la gestion de leurs données et d'optimiser leurs processus internes. Résultat : une meilleure efficacité et une réduction des coûts.</li>
+            <li><strong>Amélioration de l'infrastructure IT pour une startup :</strong> Nous avons accompagné une startup en pleine croissance en révisant et en améliorant leur infrastructure IT. Cela a permis d'améliorer leur productivité et d’assurer une meilleure sécurité des données.</li>
+            <li><strong>Création d'un site e-commerce :</strong> Nous avons conçu un site e-commerce pour un client dans le secteur du gaming, avec une interface utilisateur fluide et un système de gestion des stocks efficace.</li>
+        </ul>
+
+        <p>
+            Nous croyons fermement en l'importance de comprendre les besoins spécifiques de chaque client afin de fournir des solutions réellement adaptées.
+        </p>
+    </div>
+</section>
+
+    
+    <div class="blur-container">
+        <img src="https://i.pinimg.com/originals/0e/c9/64/0ec9649b61c94712a41fd46a3e7f5661.jpg" alt="Image chien normale" />
+        <img src="https://s2-techtudo.glbimg.com/XKDSd9RgiMiPLowJWUrpe2EnW_I=/0x0:1000x667/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2024/V/D/WqqB98QomF4EBAPegtFQ/2149829138.jpg" alt="Image voilier normale" />
+        <img src="https://i.ytimg.com/vi/tZr-0eOaZwU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAKPOrAsVM-8hwG4PSgqON2iT9WKw" alt="Image fleur normale" />
+        <img src="https://preview.redd.it/el5ervuodiqb1.jpg?auto=webp&s=3abf08988fa96d126088b3f1f526ca9e39e9607e" alt="Image fleur normale" />
+    </div>
+
+
+<!------------------------- Pour nous contacter ------------------------->
+
+    <section id="contact">
+        <div class="container">
+            <h2><center>Nous Contacter</h2></center>
+            <form action="envoyer_mail.php" method="post">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required><br><br>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message :</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+                <center><input type="submit" value="Envoyer"></center>
+            </form>
+        </div>
+    </section>
+
+<!-------------------------  Affichage compteur visites  ----------------------- -->
+
+    <p id="compteur">Nombre de visites : en cours...</p>
+
+    </main>
+
+<footer>
+    <div class="container">
+        <p>&copy;  Vente de Matériel Informatique à Perigeux </p>
+        <p>&copy;  Ismaël Mrahi /Issam Mrahi/ Anis Mrahi / 1G5</p>
+    </div>
+
+</footer>
+</body>
+</html>

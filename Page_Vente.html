@@ -1,0 +1,396 @@
+<!DOCTYPE html> 
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vente de Matériel Informatique</title>
+    <link rel="stylesheet" href="Style_CSS_triplOS.css" type="text/css">
+	
+
+<!-------------------------  Script compteur visites  ----------------------- -->
+
+    <style>
+        #compteur {
+            font-size: 1.5rem;
+            color: #28a745;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            border: 2px solid #28a745;
+            border-radius: 10px;
+            background-color: #f4f4f4;
+            width: fit-content;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <script>
+        // Simuler un compteur de visites avec localStorage
+        function gererCompteur() {
+            // Charger ou initialiser le compteur
+            let compteur = localStorage.getItem("compteur_visites");
+            if (compteur === null) {
+                compteur = 0;
+            } else {
+                compteur = parseInt(compteur, 10);
+            }
+
+            // Incrémenter le compteur
+            compteur++;
+
+            // Enregistrer la nouvelle valeur
+            localStorage.setItem("compteur_visites", compteur);
+
+            // Afficher la valeur
+            document.getElementById("compteur").textContent = "Nombre de visites : " + compteur;
+        }
+
+        // Exécuter au chargement de la page
+        window.onload = gererCompteur;
+      </script>
+
+</head>
+
+<body>
+<script src=style_java_triplOS.js></script>
+
+<header>
+        <div class="container">
+            <h1>Vente de Matériel Informatique</h1>
+            <nav>
+                <ul>
+                    <li><a href="Page_accueil.html">Accueil</a></li>
+                    <li><a href="#produits">Produits</a></li>
+                    <li><a href="#contact">Contact</a></li>               
+                    <li><a href="Page_apropos.html">A propos</a></li>
+                    <li><a href="page_inscription.html">Inscription</a></li>
+                </ul>
+            </nav>
+        </div>
+</header>
+
+<main>
+
+
+<!----------------------- Mode sombre/clair centré----------------------->
+
+    <form name="mytheme">
+      <label class="btToggle">
+        <center>
+          <span class="btn">
+          <input type="checkbox" name="theme-mode">
+          <span class="slider"></span>
+          </span> 
+        <span class="label"> mode blanc</span>
+      </center>
+      </label>
+    </form>
+	
+
+<!--------------------  Produit text qui bouge horizontalement------------------------>
+
+    <section id="produits">
+        <div class="container">
+    	<MARQUEE scrollamount="20">
+            <center>
+            <h2 style="display: inline; vertical-align: middle;">On booste votre quotidien numérique       </h2>
+            <h2 style="display: inline; vertical-align: middle;">On booste votre quotidien numérique       </h2>
+            <h2 style="display: inline; vertical-align: middle;">On booste votre quotidien numérique       </h2>
+            </center>
+        </MARQUEE>
+        </div>
+    </section>
+
+    <style>
+        /* Cible uniquement le conteneur de la section produits */
+        #produits .container {
+            max-width: 1200px; /* Ajustez cette largeur selon vos besoins */
+            max-height: 550px; /* Limite la hauteur à 150px (modifiez selon vos besoins) */
+            margin: 0 auto;   /* Centre le conteneur horizontalement */
+            overflow: hidden; /* Cache les débordements éventuels */
+        }
+
+        #produits marquee {
+            display: block;
+        }
+    </style>
+
+<!-------------------------  barre de recherche ------------------------->
+    
+    <center>
+        <input type="text" id="searchInput" placeholder="Rechercher un produit..." onkeyup="filterList()">
+    </center>
+    
+    <ul id="resultList">
+        
+        <li><a href="#PC gamer">PC Gamer</a></li>
+		<li><a href="#Clavier mécanique">Clavier mécanique</a></li>
+		<li><a href="#Barrette de RAM">Barrette de RAM</a></li>
+		<li><a href="#Souris filaire pour PC">Souris filaire pour PC</a></li>
+		<li><a href="#Ecran gaming haute Résolution">Ecran gaming haute Résolution</a></li>
+		<li><a href="#PC gaming portable">PC gaming portable</a></li>
+        <li><a href="#Montage PC + Window11">Montage PC + Window11</a></li> 			
+    </ul>
+
+<!-------------------------  1er produit à vendre - PC GAMER ------------------------->
+
+	<div class="produit">				
+	<div id="PC gamer" class="produit">			
+                
+    <center>
+        <img src="https://storage-asset.msi.com/global/picture/image/feature/PC-Components/MPG-SEKIRA_500X/swing-door_inner.gif">
+    </center>
+            <h3>PC gamer RGB Haute Game : </h3>
+            <p style="color:#FF0000";> Description du PC gamer :</p>
+            <p>Boitier (184,99€) : MPG SEKIRA 500X </p>
+            <p>Carte Mère (208€) : ASUS ROG STRIX B760-G GAMING</p>
+            <p>Barette de RAM (183,54€) : CORSAIR Vengeance RGB DDR5 RAM 32GB </p>
+            <p>Watercooling (197,25€) : CORSAIR iCUE Link H100i RGB Liquid CPU Cooler - 240mm  </p>
+            <p>Processeur (421€) : Intel® Core™ i7-13700F</p>
+            <p>Carte graphique (900€) : AMD Radeon RX 7900 XT Phantom Gaming 20GB OC GDDR6 </p>
+            <p>Alimentation (136,70€) : MSI MPG A850G PCIE5 Bloc d'alimentation, Prise EU, 850W, Certifié 80 Plus Gold, ATX 3.0 100 purcent Modulaire</p>
+            <b>Prix: 2231,48 €</b>
+	</div>
+	</div>
+			
+<!-------------------------  ajout au panier - PC GAMER------------------------->
+
+	<div class="products">
+    <div class="product">
+        <p>PC GAMER</p>
+        <span class="price">2231,48€</span>
+        <button class="add-to-cart" data-name="ordinateur" data-price="2231,48">Ajouter au panier</button>
+    </div>
+	</div>
+
+<!-------------------------  2ème  produit à vendre - CLAVIER MECANIQUE ------------------------->
+
+    <div class="produit">
+	<div id="Clavier mécanique" class="produit">	
+    
+    <center>
+        <img src="https://gamemaxpc.com/runtime/image/w80px_h80px_1546055011.gif">
+    </center>
+        <h3>Clavier mécanique :</h3>
+        <p style="color:#FF0000";> Description du clavier :</p>
+        <p>Clavier (209€) : SteelSeries Apex Pro clavier gaming HyperMagnetic- RGB - Port USB - Français AZERTY</p>
+        <b>Prix: 209 €</b>
+	</div>
+	</div>
+	
+<!------------------------- ajout au panier - CLAVIER MECANIQUE ------------------------->
+
+    <div class="products">
+    <div class="product">		
+        <p>Clavier mécanique</p>
+        <span class="price">209€</span>
+        <button class="add-to-cart" data-name="clavier" data-price="209">Ajouter au panier</button>
+    </div>
+    </div>
+				
+<!-------------------------  3ème  produit à vendre - BARRETTE MEMOIRE ------------------------->
+
+    <div class="produit">
+	<div id="Barrette de RAM" class="produit">
+    <center>
+        <img src="https://www.gigabyte.com/FileUpload/Global/WebPage/332/images/Night_Hawk_rgb_light_1.gif">
+    </center>
+        <h3>Barrette de RAM </h3>
+        <p style="color:#FF0000";> Description de la RAM :</p>
+        <p><b>Capacité :</b> 32 Go</p>
+		<p><p>Type :</b> CORSAIR Vengeance RGB DDR5</p>
+		<p><b>Fréquence :</b> 5600 MHz</p>
+		<p><b>Latence :</b> CL36</p>
+		<p><b>Tension :</b> 1.25V</p>
+		<p><b>Facteur de forme :</b> DIMM</p>
+		<p><b>Canal :</b> Dual Channel</p>
+		<p><b>Profil XMP :</b> Oui</p>
+		<p><b>Prix :</b> 183,54 €</p>
+           
+	</div>
+	</div>
+
+    
+<!-------------------------  ajout au panier - BARETTE MEMOIRE ------------------------->
+
+	<div class="products">
+    <div class="product">
+        <p>Barrette de RAM</p>
+        <span class="price">183,54€</span>
+        <button class="add-to-cart" data-name="RAM" data-price="183,54">Ajouter au panier</button>
+    </div>
+    </div>
+	<!-- </center> -->
+
+<!-------------------------  4ème  produit à vendre - SOURIS ------------------------->
+    
+    <div class="produit">
+	<div id="Souris filaire pour PC" class="produit">
+    <center>
+        <img src="https://storage-asset.msi.com/global/picture/image/feature/multimeda/mouse/GM08/rapid-img.gif">
+    </center>
+        <h3>Souris filaire pour PC : </h3>
+        <p style="color:#FF0000";> Description de la souris :</p>
+        <p>Souris (60€) : MSI Clutch GM08 Souris optique filaire Gaming avec LED Rouge 4200 DPI </p>
+        <b>Prix: 60€</b>
+    </div>
+	</div>
+
+    
+<!-------------------------  ajout au panier - SOURIS ------------------------->
+
+    <div class="products">
+    <div class="product">		
+        <p>Souris gamer</p>
+        <span class="price">60€</span>
+        <button class="add-to-cart" data-name="clavier" data-price="60">Ajouter au panier</button>
+    </div>
+    </div>
+	<!-- </center>			  -->
+
+<!-------------------------  5ème  produit à vendre - ECRAN ------------------------->
+
+    <div class="produit">
+	<div id="Ecran gaming haute Résolution" class="produit">
+    <center>
+        <img src="https://storage-asset.msi.com/global/picture/image/feature/AIO/Monitor/OptixMAG271R/UpAndDown2.gif">
+    </center>
+        <h3>Ecran gaming haute Résolution :</h3>
+        <p style="color:#FF0000";> Description de l'écran :</p>
+        <p>Clavier (989€) : ASUS PG27AQDM - 27" OLED 4K 240HZ 0.03MS</p>
+        <p>Taille : 27"</p>
+        <p>Résolution : 2560x1440</p>
+        <p>Type d'écran : Plat</p>
+        <p>Temps de Réponse : 0.3 ms</p>
+        <p>Type de Dalle : OLED</p>
+        <p>Connecteur : HDMI</p>
+        <p>Fréquences :240Hz</p>
+        <p>Couleur :Noir</p>
+        <p>Tactile : écran non tactile</p>
+        <b>Prix: 989 €</b>
+                    
+    </div>
+	</div>
+				
+    
+<!-------------------------  ajout au panier - ECRAN ------------------------->
+    <div class="products">
+    <div class="product">		
+        <p>Ecran Gaming</p>
+        <span class="price">989€</span>
+        <button class="add-to-cart" data-name="Ecran gaming" data-price="989">Ajouter au panier</button>
+    </div>
+    </div>
+	<!-- </center> -->
+	
+    </div class="container">	
+
+<!-------------------------  6ème  produit à vendre - PC PORTABLE ------------------------->	
+
+	<div class="produit">
+	<div id="PC gaming portable" class="produit">
+    <center>
+        <img src="https://storage-asset.msi.com/event/2018/appplayer/images/2021/Hotkey-Lighting-model.gif" width=30% height=30% >
+    </center>
+        <h3>PC Portable MSI Haute Performance :</h3>
+        <p style="color:#FF0000;">Description du PC portable :</p>
+        <p><strong>Modèle :</strong> MSI GE76 Raider - 17.3" - Intel Core i7 - NVIDIA RTX 3070</p>
+        <p><strong>Taille de l'écran :</strong> 17.3" Full HD (1920x1080)</p>
+        <p><strong>Processeur :</strong> Intel Core i7-12700H (12 cœurs, 24 threads)</p>
+        <p><strong>Carte graphique :</strong> NVIDIA GeForce RTX 3070 (8 Go GDDR6)</p>
+        <p><strong>Mémoire RAM :</strong> 16 Go DDR4 (extensible)</p>
+        <p><strong>Stockage :</strong> SSD NVMe 1 To</p>
+        <p><strong>Système d'exploitation :</strong> Windows 11 Home</p>
+        <p><strong>Connecteurs :</strong> 1 x USB-C, 3 x USB-A, 1 x HDMI, 1 x Ethernet RJ45, 1 x lecteur de carte SD, Jack 3.5mm</p>
+        <p><strong>Fréquence de rafraîchissement :</strong> 144Hz</p>
+        <p><strong>Clavier :</strong> RGB SteelSeries</p>
+        <p><strong>Couleur :</strong> Noir</p>
+        <p><strong>Prix :</strong> 2 099 €</p>
+    </div>
+	</div>
+
+    
+<!-------------------------  ajout au panier - PC PORTABLE ------------------------>
+
+    <div class="products">
+    <div class="product">		
+        <p>PC gamer portable</p>
+        <span class="price">2099€</span>
+        <button class="add-to-cart" data-name="PC gamer portable" data-price="2099">Ajouter au panier</button>
+    </div>
+    </div>
+
+<!-------------------------  7ème  produit à vendre - SERVICE MONTAGE ------------------------->
+
+	<div class="produit">
+	<div id="Montage PC + Window11" class="produit">
+    <center>
+        <img src="https://www.shscomputer.be/_images/catalogue_articles/22510.jpg" width=30% height=30% >
+    </center>
+        <h3>Service de Montage PC et Installation de Windows 11 :</h3>
+        <p style="color:#FF0000;">Description du service :</p>
+        <p><strong>Montage PC personnalisé :</strong> Assemblage de votre PC sur mesure selon vos besoins (gaming, bureautique, etc.). Nous sélectionnons les meilleures pièces en fonction de votre budget et de vos exigences.</p>
+        <p><strong>Composants utilisés :</strong> Processeur, carte mère, carte graphique, mémoire RAM, stockage SSD/HDD, alimentation et refroidissement de qualité, selon votre choix.</p>
+        <p><strong>Installation de Windows 11 :</strong> Nous installons la dernière version de Windows 11, avec toutes les mises à jour et les pilotes nécessaires pour garantir des performances optimales.</p>
+        <p><strong>Tests et Vérifications :</strong> Après le montage, nous testons votre PC pour nous assurer que toutes les fonctionnalités fonctionnent parfaitement, y compris la stabilité et les performances.</p>
+        <p><strong>Prix du service :</strong> À partir de 299 € pour le montage et l'installation de Windows 11 (hors coût des composants). </p>
+        <p><strong>Délai de réalisation :</strong> En général, le montage et l'installation prennent entre 2 à 4 jours ouvrés, en fonction de la disponibilité des composants.</p>
+        <p><strong>Garantie :</strong> Garantie de 1 an sur le montage et l'installation de Windows 11, avec support technique en cas de besoin.</p>
+        <p><strong>Prix :</strong> 299 €</p>
+    </div>
+	</div>
+    
+<!-------------------------  ajout au panier - SERVICE MONTAGE ------------------------->
+
+    <div class="products">
+    <div class="product">		
+        <p>Montage + Windows</p>
+        <span class="price">299€</span>
+        <button class="add-to-cart" data-name="Montage PC + Window1" data-price="299">Ajouter au panier</button>
+    </div>
+	</div>
+    <!-- </center> -->
+	<!-- </div class="container">	 -->
+	
+<!-------------------------  Panier de la fin  ------------------------->
+
+    <div class="cart">
+        <h2>Votre Panier</h2>
+        <ul id="cart-items"></ul>
+        <h1><p><b>Total : <span id="total"> 0€  </span></b></p></h1>
+        <button id="checkout" enabled>Passer aux paiements</button>
+        <button id="clear-cart">Vider le Panier</button>
+    </div>
+		
+<!-------------------------  Pour nous contacter  ------------------------->
+
+    <section id="contact">
+        <div class="container">
+            <h2><center>Nous Contacter</h2></center>
+            <form action="envoyer_mail.php" method="post">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" style="width: 100%;" required><br><br>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message :</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+                <center><input type="submit" value="Envoyer"></center>
+            </form>
+        </div>
+    </section>
+
+<!-------------------------  Affichage compteur visites  ------------------------->
+
+    <p id="compteur">Nombre de visites : en cours...</p>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy;  Vente de Matériel Informatique à Perigeux </p>
+        <p>&copy;  Ismaël Mrahi /Issam Mrahi/ Anis Mrahi / 1G5</p>
+    </div>
+</footer>
+
+</body>
+</html>

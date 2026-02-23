@@ -1,0 +1,158 @@
+<!DOCTYPE html> 
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vente de Matériel Informatique</title>
+    <link rel="stylesheet" href="Style_CSS_triplOS.css" type="text/css">
+
+    <!-------------------------  Script compteur visites  ----------------------- -->
+
+    <style>
+        #compteur {
+            font-size: 1.5rem;
+            color: #28a745;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            border: 2px solid #28a745;
+            border-radius: 10px;
+            background-color: #f4f4f4;
+            width: fit-content;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <script>
+        // Simuler un compteur de visites avec localStorage
+        function gererCompteur() {
+            // Charger ou initialiser le compteur
+            let compteur = localStorage.getItem("compteur_visites");
+            if (compteur === null) {
+                compteur = 0;
+            } else {
+                compteur = parseInt(compteur, 10);
+            }
+
+            // Incrémenter le compteur
+            compteur++;
+
+            // Enregistrer la nouvelle valeur
+            localStorage.setItem("compteur_visites", compteur);
+
+            // Afficher la valeur
+            document.getElementById("compteur").textContent = "Nombre de visites : " + compteur;
+        }
+
+        // Exécuter au chargement de la page
+        window.onload = gererCompteur;
+      </script>
+</head>
+
+<body>
+    <script src="style_java_triplOS.js"></script>
+    <header>
+        <div class="container">
+            <h1>Vente de Matériel Informatique</h1>
+            <nav>
+                <ul>
+                    <span class="blink-one">
+                        <li><a href="Page_accueil.html">Accueil</a></li>
+                        <li><a href="Page_Vente.html">Produits</a></li>
+                        <li><a href="#contact">Contact</a></li>               
+                        <li><a href="page_apropos.html">A propos</a></li>
+                        <li><a href="page_inscription.html">Inscription</a></li>
+                    </span>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<main>
+    <!-- Mode sombre/clair centré -->
+    <form name="mytheme">
+        <label class="btToggle">
+            <center>
+                <span class="btn">
+                    <input type="checkbox" name="theme-mode">
+                    <span class="slider"></span>
+                </span> 
+                <span class="label"> mode blanc</span>
+            </center>
+        </label>
+    </form>
+
+    <!-- Texte de présentation -->
+    <section id="A propos">
+        <div class="container">
+            <h2>Bienvenue sur notre page d’inscription ! 🚀</h2>
+            <h3>Rejoignez-nous dès aujourd’hui !</h3>
+            <p>Inscrivez-vous pour accéder à tous les avantages et services offerts.</p>
+            <h3>C’est simple et rapide</h3>
+            <ul>
+                <li>Remplissez le formulaire ci-dessous avec vos informations</li>
+                <li>Validez votre inscription</li>
+                <li>Commencez à profiter de vos services/avantages</li>
+            </ul>
+            <h3>Vos informations sont en sécurité</h3>
+            <p>Nous attachons une grande importance à la confidentialité de vos données.</p>
+            <p><strong>Merci de nous faire confiance pour vos besoins informatiques !</strong></p>
+        </div>
+    </section>
+
+    <!-- Image -->
+    <center>
+        <img src="https://asptt-toulouse-natation.comiti-sport.fr/uploads/news/ce53822b87d7c2952507007baeeec427011d7cb4.png" 
+        width="10%" height="10%" />
+    </center>
+    <hr>
+
+    <!-- Formulaire -->
+    <form action="formulaire_inscription.php" method="post"> <!-- Pas de serveur PHP disponible -->
+        <center><h3>S'inscrire</h3></center>
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+        <br><br>
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label for="motdepasse">Mot de passe :</label>
+        <input type="password" id="motdepasse" name="motdepasse" required>
+        <br><br>
+        <input type="radio" id="inscription" name="action" value="inscription" checked>
+        <label for="inscription">S'inscrire</label>
+        <br><br>
+        
+        <center><h3>Ou laisser un commentaire</h3></center>
+        <label for="commentaire">Commentaire :</label>
+        <textarea id="commentaire" name="commentaire"></textarea>
+        <br><br>
+        <input type="radio" id="commentaireAction" name="action" value="commentaire">
+        <label for="commentaireAction">Laisser un commentaire</label>
+        <br><br>
+        <input type="submit" value="Envoyer">
+    </form>
+<!-------------------------  Pour nous contacter  ----------------------- -->
+
+    <section id="contact">
+        <div class="container">
+            <h2><center>Nous Contacter</h2></center>
+            <form action="envoyer_mail.php" method="post">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" style="width: 100%;" required><br><br>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message :</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+                <center><input type="submit" value="Envoyer"></center>
+            </form>
+        </div>
+    </section>
+    
+<!-------------------------  Affichage compteur visites  ----------------------- -->
+
+    <p id="compteur">Nombre de visites : en cours...</p>
+
+</main>
+</body>
+</html>

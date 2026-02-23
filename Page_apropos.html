@@ -1,0 +1,227 @@
+<!DOCTYPE html> 
+<html lang="fr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vente de Matériel Informatique</title>
+    <link rel="stylesheet" href="Style_CSS_triplOS.css" type="text/css">
+
+<!-------------------------  Script compteur visites  ----------------------- -->
+
+    <style>
+        #compteur {
+            font-size: 1.5rem;
+            color: #28a745;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            border: 2px solid #28a745;
+            border-radius: 10px;
+            background-color: #f4f4f4;
+            width: fit-content;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <script>
+        // Simuler un compteur de visites avec localStorage
+        function gererCompteur() {
+            // Charger ou initialiser le compteur
+            let compteur = localStorage.getItem("compteur_visites");
+            if (compteur === null) {
+                compteur = 0;
+            } else {
+                compteur = parseInt(compteur, 10);
+            }
+
+            // Incrémenter le compteur
+            compteur++;
+
+            // Enregistrer la nouvelle valeur
+            localStorage.setItem("compteur_visites", compteur);
+
+            // Afficher la valeur
+            document.getElementById("compteur").textContent = "Nombre de visites : " + compteur;
+        }
+
+        // Exécuter au chargement de la page
+        window.onload = gererCompteur;
+      </script>
+
+</head>
+
+<body>
+
+	<script src=style_java_triplOS.js></script>
+    <header>
+        <div class="container">
+            <h1>Vente de Matériel Informatique</h1>
+            <nav>
+                <ul>
+                    <span class="blink-one">
+                      <li><a href="Page_accueil.html">Accueil</a></li>
+                    <li><a href="Page_Vente.html">Produits</a></li>
+                    <li><a href="#contact">Contact</a></li>               
+                    <li><a href="page_apropos.html">A propos</a></li>
+                    <li><a href="page_inscription.html">Inscription</a></li>
+                    </span>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+<main>
+      
+<!-- Mode sombre/clair centré-->
+
+    <form name="mytheme">
+      <label class="btToggle">
+        <center>
+          <span class="btn">
+          <input type="checkbox" name="theme-mode">
+          <span class="slider"></span>
+          </span> 
+        <span class="label"> mode blanc</span>
+      </center>
+      </label>
+    </form>
+
+<!------------------------- Texte de présentation de A PROPOS  ------------------------->
+
+<section id="A propos">
+    <div class="container">
+        <h2>À propos de nous</h2>
+        <p>Bienvenue sur notre site, votre partenaire de confiance pour toutes vos solutions informatiques. Depuis notre création, nous avons pour mission de simplifier l'accès aux technologies en proposant une gamme complète de produits et de services adaptés à vos besoins, qu'il s'agisse de particuliers, de professionnels ou d'entreprises.</p>
+        
+        <h3>Ce que nous offrons :</h3>
+        <ul>
+            <li><strong>Matériel informatique :</strong> PC, ordinateurs, composants, périphériques, et accessoires.</li>
+            <li><strong>Services personnalisés :</strong> Assistance technique, conseils d'achat, et montage sur mesure.</li>
+        </ul>
+
+        <p>Notre équipe est composée de passionnés d'informatique, toujours prêts à vous guider dans vos choix pour vous offrir des produits de qualité au meilleur prix.</p>
+        
+        <h3>Pourquoi nous choisir ?</h3>
+        <ul>
+            <li><strong>Une expertise technique inégalée.</strong></li>
+            <li><strong>Des produits garantis et soigneusement sélectionnés.</strong></li>
+            <li><strong>Une livraison rapide et fiable.</strong></li>
+            <li><strong>Un service client à votre écoute.</strong></li>
+        </ul>
+
+        <p>Chez nous, nous croyons que la technologie doit être accessible à tous. Que vous soyez un joueur exigeant, un professionnel en quête de performance, ou simplement à la recherche d’un appareil adapté à votre quotidien, nous avons la solution qu’il vous faut.</p>
+
+        <p><strong>Merci de nous faire confiance pour vos besoins informatiques !</strong></p>
+    </div>
+</section>
+
+
+<!------------------------- Insertion image  ------------------------->
+
+  	<center>
+  		<img src="https://www.cybertek.fr/blog/wp-content/uploads/2022/08/Quels-accessoires-pour-son-setup-gamer.jpg" 
+  		width=40% height=40% />
+  	</center>
+    <br></br> 
+    <HR>
+
+<!------------------------- Avis client  ------------------------->
+
+   
+  <section class="reviews">
+    <h2> <center><font color=" #008000 "> Avis Clients </font> </h2></center>
+
+    <div class="review-container">
+      <!-- Avis 1 -->
+      <div class="review-card">
+        <div class="review-header">
+          <img src="https://cdn.icon-icons.com/icons2/2643/PNG/512/male_man_boy_black_tone_people_person_avatar_icon_159356.png" alt="Client 1" class="review-avatar">
+          <h3>Anis Mrahi</h3>
+        </div>
+        <p class="review-text">"Excellente expérience! Le service était rapide et de qualité."</p>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+      </div>
+
+      <!-- Avis 2 -->
+      <div class="review-card">
+        <div class="review-header">
+          <img src="https://cdn-icons-png.flaticon.com/512/186/186313.png" alt="Client 2" class="review-avatar">
+          <h3>Antoine Dandry</h3>
+        </div>
+        <p class="review-text">"décu de la qualité"</p>
+        <div class="rating">⭐</div>
+      </div>
+
+      <!-- Avis 3 -->
+      <div class="review-card">
+        <div class="review-header">
+          <img src="https://cdn-icons-png.flaticon.com/512/6834/6834225.png" alt="Client 3" class="review-avatar">
+          <h3>Kalvin huffman</h3>
+        </div>
+        <p class="review-text">"Service client réactif et produits de qualité. Je recommande! Cepandant j'ai une une altercation avec la Service Client"</p>
+        <div class="rating">⭐⭐⭐</div>
+      </div>
+
+
+      <!-- Formulaire d'ajout d'avis -->
+      <div class="add-review-form">
+        <h3>Ajoutez votre avis</h3>
+        <form id="reviewForm">
+          <label for="name">Nom:</label>
+          <input type="text" id="name" placeholder="Votre nom" required>
+
+          <label for="review">Votre avis:</label>
+          <textarea id="review" placeholder="Votre avis ici..." required></textarea>
+
+          <label for="rating">Note:</label>
+          <select id="rating" required>
+            <option value="1">1 étoile</option>
+            <option value="2">2 étoiles</option>
+            <option value="3">3 étoiles</option>
+            <option value="4">4 étoiles</option>
+            <option value="5">5 étoiles</option>
+          </select>
+
+          <button type="submit">Merci pour l'ajout de votre avis</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <br></br> 
+  <HR>
+
+<!------------------------- Pour nous contacter  ------------------------->
+
+  <section id="contact">
+      <div class="container">
+          <h2><center>Nous Contacter</h2></center>
+          <form action="envoyer_mail.php" method="post">
+              <label for="nom">Nom :</label>
+              <input type="text" id="nom" name="nom" required><br><br>
+              <label for="email">Email :</label>
+              <input type="email" id="email" name="email" required><br><br>
+              <label for="message">Message :</label><br>
+              <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+              <center><input type="submit" value="Envoyer"></center>
+          </form>
+      </div>
+  </section>
+  
+  <!-------------------------  Affichage compteur visites  ----------------------- -->
+
+  <p id="compteur">Nombre de visites : en cours...</p>
+
+
+</main>
+
+<footer>
+  <div class="container">
+      <p>&copy;  Vente de Matériel Informatique à Perigeux </p>
+      <p>&copy;  Ismaël Mrahi /Issam Mrahi/ Anis Mrahi / 1G5</p>
+  </div>
+</footer>
+
+</body>
+</html>
